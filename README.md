@@ -79,9 +79,13 @@ localStorage.setItem("nombreLlave",JSON.stringify(json));
 
 Para almacenar los datos del formulario, se utilizó localStorage. El objeto localStorage permite guardar pares clave/valor en el navegador sin fecha de caducidad, es decir, los datos no se borran cuando se cierra el navegador y quedan disponibles para futuras navegaciones.
 
+Para verificar su almacenamiento puede dirigirte a la DevTools -> Aplicación -> Almacenamiento -> IP
+
 Encontrar validaciones predeterminadas que existen en JavaScript con el estado de validez;
 Interpretar cada tipo de error;
 Crear mensajes personalizados;
 Eliminar el comportamiento de error de HTML predeterminado;
 Mostrar mensajes personalizados en la página;
 Guardar datos en localStorage.
+
+## Inicia la camara, toma foto y guardala
