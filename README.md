@@ -88,4 +88,12 @@ Eliminar el comportamiento de error de HTML predeterminado;
 Mostrar mensajes personalizados en la página;
 Guardar datos en localStorage.
 
-## Inicia la camara, toma foto y guardala
+## 1 Inicia la camara, 2 toma foto y 3 guardala
+__1__
+debe de estár dentro de una función async.
+
+const iniciarVideo = await navigator.mediaDevices.getUserMedia({video:true,audio:false});
+video.srcObject=iniciarVideo;
+__2__
+
+__3__
