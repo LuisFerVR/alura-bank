@@ -71,3 +71,17 @@ const tipoErrores = [
   "tooShort",
   "customError",
 ];
+
+Almacenamiento:
+localStorage.setItem('usuario',JSON.stringify(usuario));
+El método setItem() permite almacenar objetos en el localStorage y a través del método JSON.stringify() convertimos el objeto a un formato compatible para su almacenamiento.
+localStorage.setItem("nombreLlave",JSON.stringify(json));
+
+Para almacenar los datos del formulario, se utilizó localStorage. El objeto localStorage permite guardar pares clave/valor en el navegador sin fecha de caducidad, es decir, los datos no se borran cuando se cierra el navegador y quedan disponibles para futuras navegaciones.
+
+Encontrar validaciones predeterminadas que existen en JavaScript con el estado de validez;
+Interpretar cada tipo de error;
+Crear mensajes personalizados;
+Eliminar el comportamiento de error de HTML predeterminado;
+Mostrar mensajes personalizados en la página;
+Guardar datos en localStorage.
