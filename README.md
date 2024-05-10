@@ -62,3 +62,12 @@ Valide los dígitos de control de Cuil/Cuit;
 Transforme fórmulas matemáticas en código;
 Tratar con fechas en JavaScript;
 Construya comparaciones de fechas para verificar la edad.
+
+En el módulo 4 vimso validity y sus propiedades 
+const tipoErrores = [
+  "valueMissing",
+  "typeMissmatch",
+  "patternMissmatch",
+  "tooShort",
+  "customError",
+];

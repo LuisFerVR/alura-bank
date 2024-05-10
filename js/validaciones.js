@@ -1,12 +1,12 @@
 export default function fnEsUnCuilt(campo) {
     const cuil = campo.value.replace(/[-\/]/g, "");
     if(fnNumerosRepetidos(cuil)){
-        alert("valores repetidos");
+        campo.setCustomValidity("valores repetidos");
     }else{
         if (fnValidarPrimerosDosDigitos(cuil) && fnValidarDigitoVerificador(cuil)) {
             alert("cuil válido");
         }else{
-            alert("cuil no existente");
+            campo.setCustomValidity("CUIL NO EXISTENTE");
         }
     }
 }
