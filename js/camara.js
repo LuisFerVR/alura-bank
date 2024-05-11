@@ -21,3 +21,14 @@ btnCapturarFoto.addEventListener('click',()=>{
     campoCamara.style.display="none";
     mensajeDeFotoCapturada.style.display="block"
 })
+
+// Guardar una foto
+const btnEnviar = document.querySelector("[data-enviar]");
+btnEnviar.addEventListener('click',()=>{
+    const recibirDatos = localStorage.getItem("registro");
+    const datosConvertidos = JSON.parse(recibirDatos);
+    datosConvertidos.img_url=imgURL;
+
+    localStorage.setItem('registro',JSON.stringify(datosConvertidos));
+    window.location.href="/pages/abrir-cuenta-form-3.html";
+});

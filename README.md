@@ -95,5 +95,12 @@ debe de estár dentro de una función async.
 const iniciarVideo = await navigator.mediaDevices.getUserMedia({video:true,audio:false});
 video.srcObject=iniciarVideo;
 __2__
-
+capturar foto
 __3__
+Guardar en la localStorage
+
+Iniciar la cámara del usuario en el navegado;
+Capturar foto;
+Manejar eventos de clic;
+Aplicar un flujo de navegación ocultando y mostrando elementos;
+Insertar nuevos datos en localStorage.
