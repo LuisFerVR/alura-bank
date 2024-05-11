@@ -11,7 +11,10 @@
 ## Tecnologías utilizadas en el proyecto
 * HTML
 * CSS
-
+* 
+## Link de despliegue:
+https://luisfervr.github.io/alura-bank/
+---------------------------------------
 pattners:
 ![alt text](image.png)
 
