@@ -6,14 +6,14 @@
 <p align="center">Formulario de creación de cuenta para el banco virtual AluraBank.</p>
 
 ## Tecnologías utilizadas durante el curso
-* JavaScript
+![Static Badge](https://img.shields.io/badge/Js-yellow)
+![Static Badge](https://img.shields.io/badge/HTML-black)
+![Static Badge](https://img.shields.io/badge/Css-blue)
 
-## Tecnologías utilizadas en el proyecto
-* HTML
-* CSS
-* 
-## Link de despliegue:
-https://luisfervr.github.io/alura-bank/
+## 🚀 Link de despliegue: 🚀
+
+[:open_file_folder: Abrir alura-bank :open_file_folder:](https://luisfervr.github.io/alura-bank/)
+
 ---------------------------------------
 pattners:
 ![alt text](image.png)
