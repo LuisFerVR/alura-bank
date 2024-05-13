@@ -15,14 +15,15 @@
 [:open_file_folder: Abrir alura-bank :open_file_folder:](https://luisfervr.github.io/alura-bank/)
 
 ---------------------------------------
-pattners:
-![alt text](image.png)
+## Patrones o expresiones:
 
 Cuando trabajamos en el registro de una persona o empresa en una aplicación bancaria como Alura-Bank necesitamos validar su código de identificación laboral o tributaria. Cada país tiene una fórmula específica para generar este código.
 
 Tomaremos como ejemplo el Cuil (Código Único de identificación Laboral) o Cuit (Código Unico de Identificación Tributaria).
 
-CUIL / CUIT
+![alt text](image.png)
+
+Procedimiento para validar el CUIL / CUIT
 
 CUIL/T: Son 11 números en total:
 XY – 12345678 – Z
@@ -36,8 +37,6 @@ Masculino: 20
 Femenio: 27
 Empresa: 30
 Se multiplica XY 12345678 por un número de forma separada:
-
-
 
 Se suman dichos resultados. El resultado obtenido se divide por 11. De esa división se obtiene un Resto que determina Z.
 
@@ -59,14 +58,15 @@ Determinamos Z
 
 El resultado final sería 20-12345678-6
 
-Lo que aprendi este módulo 3 del cursp de válidar formulario de una aplicación bancaria
+## Lo que aprendi este módulo 3 del curso válidar formulario de una aplicación bancaria
 
-Valide los dígitos de control de Cuil/Cuit;
-Transforme fórmulas matemáticas en código;
-Tratar con fechas en JavaScript;
-Construya comparaciones de fechas para verificar la edad.
+* Valide los dígitos de control de Cuil/Cuit;
+* Transforme fórmulas matemáticas en código;
+* Tratar con fechas en JavaScript;
+* Construya comparaciones de fechas para verificar la edad.
 
-En el módulo 4 vimso validity y sus propiedades 
+## En el módulo 4 vimos validity y sus propiedades:
+
 const tipoErrores = [
   "valueMissing",
   "typeMissmatch",
@@ -75,7 +75,7 @@ const tipoErrores = [
   "customError",
 ];
 
-Almacenamiento:
+## Almacenamiento:
 localStorage.setItem('usuario',JSON.stringify(usuario));
 El método setItem() permite almacenar objetos en el localStorage y a través del método JSON.stringify() convertimos el objeto a un formato compatible para su almacenamiento.
 localStorage.setItem("nombreLlave",JSON.stringify(json));
@@ -102,8 +102,9 @@ capturar foto
 __3__
 Guardar en la localStorage
 
-Iniciar la cámara del usuario en el navegado;
-Capturar foto;
-Manejar eventos de clic;
-Aplicar un flujo de navegación ocultando y mostrando elementos;
-Insertar nuevos datos en localStorage.
+## Aprendizajes del curso
+* Iniciar la cámara del usuario en el navegado;
+* Capturar foto;
+* Manejar eventos de clic;
+* Aplicar un flujo de navegación ocultando y mostrando elementos;
+* Insertar nuevos datos en localStorage.
