@@ -15,7 +15,16 @@
 [:open_file_folder: Abrir alura-bank :open_file_folder:](https://luisfervr.github.io/alura-bank/)
 
 ---------------------------------------
-## Patrones o expresiones:
+## Módulo 1:
+* Tipos d einput
+* Propiedades
+* atributos
+
+## Módulo 2:
+* addEventListener
+* patrones regex
+
+## Patrones/expresiones aplicados Módulo 3:
 
 Cuando trabajamos en el registro de una persona o empresa en una aplicación bancaria como Alura-Bank necesitamos validar su código de identificación laboral o tributaria. Cada país tiene una fórmula específica para generar este código.
 
@@ -58,14 +67,16 @@ Determinamos Z
 
 El resultado final sería 20-12345678-6
 
-## Lo que aprendi este módulo 3 del curso válidar formulario de una aplicación bancaria
+### Lo que aprendi este módulo 3 del curso válidar formulario de una aplicación bancaria
 
 * Valide los dígitos de control de Cuil/Cuit;
 * Transforme fórmulas matemáticas en código;
 * Tratar con fechas en JavaScript;
 * Construya comparaciones de fechas para verificar la edad.
 
-## En el módulo 4 vimos validity y sus propiedades:
+## Almacenamiento y validity Módulo 4:
+
+### Validity y sus propiedades:
 
 const tipoErrores = [
   "valueMissing",
@@ -75,34 +86,82 @@ const tipoErrores = [
   "customError",
 ];
 
-## Almacenamiento:
+### Almacenamiento:
+
 localStorage.setItem('usuario',JSON.stringify(usuario));
 El método setItem() permite almacenar objetos en el localStorage y a través del método JSON.stringify() convertimos el objeto a un formato compatible para su almacenamiento.
-localStorage.setItem("nombreLlave",JSON.stringify(json));
+
+`localStorage.setItem("nombreLlave",JSON.stringify(json));`
 
 Para almacenar los datos del formulario, se utilizó localStorage. El objeto localStorage permite guardar pares clave/valor en el navegador sin fecha de caducidad, es decir, los datos no se borran cuando se cierra el navegador y quedan disponibles para futuras navegaciones.
 
-Para verificar su almacenamiento puede dirigirte a la DevTools -> Aplicación -> Almacenamiento -> IP
+`Para verificar su almacenamiento puede dirigirte a la DevTools -> Aplicación -> Almacenamiento -> IP `
 
-Encontrar validaciones predeterminadas que existen en JavaScript con el estado de validez;
-Interpretar cada tipo de error;
-Crear mensajes personalizados;
-Eliminar el comportamiento de error de HTML predeterminado;
-Mostrar mensajes personalizados en la página;
-Guardar datos en localStorage.
+## Lo que aprendí en el módulo 4:
+* Encontrar validaciones predeterminadas que existen en JavaScript con el estado de validez;
+* Interpretar cada tipo de error;
+* Crear mensajes personalizados;
+* Eliminar el comportamiento de error de HTML predeterminado;
+* Mostrar mensajes personalizados en la página;
+* Guardar datos en localStorage.
 
-## 1 Inicia la camara, 2 toma foto y 3 guardala
-__1__
+## Capturando imagen Módulo 5
+
+### 1 Inicia la camara
+
 debe de estár dentro de una función async.
 
-const iniciarVideo = await navigator.mediaDevices.getUserMedia({video:true,audio:false});
-video.srcObject=iniciarVideo;
-__2__
-capturar foto
-__3__
-Guardar en la localStorage
+`const iniciarVideo = await navigator.mediaDevices.getUserMedia({video:true,audio:false}); `
 
-## Aprendizajes del curso
+`video.srcObject=iniciarVideo;`
+
+```javascript
+
+//Inicializar la camara del usuario
+const btnAbrirCamara =document.querySelector("[data-video-boton]");
+const video = document.querySelector("[data-video]");
+const campoCamara = document.querySelector("[data-camera]");
+
+btnAbrirCamara.addEventListener("click",async ()=>{
+    const iniciarVideo = await navigator.mediaDevices.getUserMedia({video:true,audio:false});
+    btnAbrirCamara.style.display="none";
+    campoCamara.style.display="block";
+    video.srcObject=iniciarVideo;
+})
+```
+
+### 2 Capturar foto
+``` JavaScript
+
+//Capturar una foto
+const btnCapturarFoto = document.querySelector("[data-tomar-foto]");
+const mensajeDeFotoCapturada = document.querySelector("[data-mensaje]");
+const canvas= document.querySelector("[data-video-canvas]");
+
+let imgURL= ""
+btnCapturarFoto.addEventListener('click',()=>{
+    canvas.getContext('2d').drawImage(video,0,0,canvas.width,canvas.height);
+    imgURL=canvas.toDataURL("image/jpeg");
+    campoCamara.style.display="none";
+    mensajeDeFotoCapturada.style.display="block"
+})
+```
+
+### 3 Guardar en la localStorage
+``` JavaScript
+// Guardar una foto
+const btnEnviar = document.querySelector("[data-enviar]");
+btnEnviar.addEventListener('click',()=>{
+    const recibirDatos = localStorage.getItem("registro");
+    const datosConvertidos = JSON.parse(recibirDatos);
+    datosConvertidos.img_url=imgURL;
+
+    localStorage.setItem('registro',JSON.stringify(datosConvertidos));
+    window.location.href="/pages/abrir-cuenta-form-3.html";
+});
+```
+
+## Aprendizajes del módulo 5
 * Iniciar la cámara del usuario en el navegado;
 * Capturar foto;
 * Manejar eventos de clic;
